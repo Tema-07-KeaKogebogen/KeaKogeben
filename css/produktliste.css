@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.time {
+  background-color: #90a74c;
+  color: white;
+  padding: 10px;
+  width: 90px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.read_more {
+  background-color: #e4b455;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
