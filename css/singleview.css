@@ -1,0 +1,60 @@
+.singleview_img img{
+    display: block;
+   width: 100%;
+   margin: 1rem auto;
+}
+
+
+
+
+/*Ingredienser*/
+.container_singleview {
+    background-color: #58483a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-height: fit-content;
+    
+}
+
+.ingredient {
+    display: flex;
+ gap: 20px;
+    padding: 8px 0;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.52)
+;
+
+}
+.ingredient:last-child {
+    border-bottom: none;
+}
+.amount {
+    font-weight: bold;
+    color: var(--brown);
+    text-align: right;
+    min-width: 60px;
+}
+span{
+    font-family: "assistant";
+}
+
+
+@media (min-width: 800px) {
+.singleview_img img{
+    width: 70%;
+}
+.grid_singleview{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    margin: 3rem auto;
+}
+.opskrift_singleview{
+    padding: 10px;
+    width: 80%;
+}
+
+}
