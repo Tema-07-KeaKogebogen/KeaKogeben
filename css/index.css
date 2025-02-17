@@ -1,0 +1,38 @@
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  background-color: red;
+  height: 4px;
+  width: 700px;
+  border: none;
+}
+
+.kategorier {
+  margin: 0 auto;
+}
+
+.kategorier h2 {
+  text-align: center;
+}
+
+.cirkel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #90a74c;
+  background-image: url("https://cdn.dummyjson.com/recipe-images/1.webp");
+  background-size: cover;
+  background-position: center;
+}
