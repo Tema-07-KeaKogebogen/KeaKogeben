@@ -9,7 +9,7 @@
 
 /*Ingredienser*/
 .container_singleview {
-    background-color: #58483a3a;
+    background-color: #58483a7e;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,20 +31,18 @@
 .ingredient:last-child {
     border-bottom: none;
 }
-.amount {
-    font-weight: bold;
-    color: var(--brown);
-    text-align: right;
-    min-width: 60px;
-}
-span{
-    font-family: "assistant";
-}
+.information_singleview{
+margin-top: 2rem;
+background-color: #58483a18;
+
+max-width:fit-content;
+margin-bottom: 1rem;}
 
 
 @media (min-width: 800px) {
 .singleview_img img{
-    width: 70%;
+    width: 50%;
+    margin-bottom: 1rem;
 }
 .grid_singleview{
     display: grid;
@@ -56,5 +54,19 @@ span{
     padding: 10px;
     width: 80%;
 }
-
+.information_singleview{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-top: 2rem;
+    background-color: #58483a18;
+    margin: 0 auto;
+    max-width:fit-content;
+    margin-bottom: 1rem;
+    margin: 0 auto;
 }
+.time_singleview{
+    text-align: right;
+}
+}
+/*time*/
+
