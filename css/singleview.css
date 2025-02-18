@@ -33,11 +33,9 @@
 }
 .information_singleview{
 margin-top: 2rem;
-background-color: #58483a18;
-
-max-width:fit-content;
-margin-bottom: 1rem;}
-
+margin-bottom: 1rem;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;}
 
 @media (min-width: 800px) {
 .singleview_img img{
@@ -58,11 +56,12 @@ margin-bottom: 1rem;}
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     margin-top: 2rem;
-    background-color: #58483a18;
+  
     margin: 0 auto;
     max-width:fit-content;
     margin-bottom: 1rem;
     margin: 0 auto;
+    align-items: last baseline;
 }
 .time_singleview{
     text-align: right;
