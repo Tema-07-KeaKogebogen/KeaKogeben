@@ -1,11 +1,26 @@
+main {
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .grid_1-1-1-1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 10px;
+  gap: 20px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 p {
-  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 40px;
+  margin-bottom: 3fr;
 }
 
 h1 {
@@ -17,6 +32,10 @@ hr {
   height: 4px;
   width: 700px;
   border: none;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 40px;
+  margin-bottom: 25px;
 }
 
 .kategorier {
@@ -35,4 +54,12 @@ hr {
   background-image: url("https://cdn.dummyjson.com/recipe-images/1.webp");
   background-size: cover;
   background-position: center;
+  margin-bottom: 10px;
+}
+
+.hero {
+  aspect-ratio: 16/9;
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
 }
