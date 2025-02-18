@@ -51,7 +51,11 @@
 }
 .product_list_container h2 {
   margin: 10px 5px;
+  font-size: 1.2rem;
 }
 .kategori {
   margin: 40px;
+}
+p {
+  color: rgb(151, 148, 148);
 }

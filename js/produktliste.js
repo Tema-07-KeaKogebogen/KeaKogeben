@@ -40,7 +40,6 @@ function showList(recipes) {
             <p class="time">${(recipe.cookTimeMinutes + recipe.prepTimeMinutes).toFixed(0)} min</p>
             <a class="read_more" href="singleview.html?id=${recipe.id}">Se opskrift</a>
          </div>  
-         
     `
     )
     .join("");
