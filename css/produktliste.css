@@ -6,8 +6,9 @@
 
 .product_list_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
   gap: 20px;
+  margin-bottom: 30px;
 }
 .card {
   position: relative;
@@ -24,13 +25,11 @@
 }
 
 .read_more {
-  background-color: #e4b455;
-  text-decoration: none;
-  color: white;
+  color: #d39822;
   border-radius: 20px;
-  padding: 10px;
+  padding: 0px 0px 15px 0px;
   margin: 10px;
-  text-align: center;
+  text-align: right;
 }
 .info {
   display: flex;
@@ -51,11 +50,11 @@
 }
 .product_list_container h2 {
   margin: 10px 5px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .kategori {
   margin: 40px;
 }
-p {
+.info p {
   color: rgb(151, 148, 148);
 }
