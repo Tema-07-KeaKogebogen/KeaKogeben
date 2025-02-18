@@ -28,7 +28,7 @@ function showCategories(data) {
     .map(
       (mealType) => `
       <div class="kategorier">
-        <a href="produktliste.html?mealType=${encodeURIComponent(mealType)}">
+        <a href="produktliste.html?category=${encodeURIComponent(mealType)}">
           <div class="cirkel" style="background-image: url('${mealTypeImages[mealType]}');"></div>
           <h2>${mealType}</h2>
         </a>
