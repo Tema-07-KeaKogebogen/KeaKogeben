@@ -1,11 +1,11 @@
-main {
-  max-width: 1500px;
-  margin-inline: auto;
-  padding-inline: 40px;
-}
-
 a {
   text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .grid_1-1-1-1 {
@@ -16,15 +16,11 @@ a {
   margin-bottom: 100px;
 }
 
-p {
+.tekst {
   max-width: 900px;
   margin-inline: auto;
   padding-inline: 40px;
   margin-bottom: 3fr;
-}
-
-h1 {
-  text-align: center;
 }
 
 hr,
