@@ -7,7 +7,7 @@ console.log("produktliste med kategorier:", myCategory);
 const product_list_container = document.querySelector(".product_list_container");
 
 // Hent data fra API'et baseret på kategori
-fetch(`https://dummyjson.com/recipes`)
+fetch(`https://dummyjson.com/recipes?limit=150`)
   .then((response) => response.json())
   .then((data) => {
     // Filtrér opskrifter baseret på kategori, hvis en kategori er valgt
