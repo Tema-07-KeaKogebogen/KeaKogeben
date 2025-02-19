@@ -1,10 +1,13 @@
-console.log("siden vises");
+console.log("Siden vises");
 
+// Hent container til kategorier
 let categoryContainer = document.querySelector(".grid_1-1-1-1");
 
+// Hent data fra API
 fetch("https://dummyjson.com/recipes")
   .then((response) => response.json())
-  .then(showCategories);
+  .then(showCategories)
+  .catch((error) => console.error("Fejl ved hentning af data:", error));
 
 function showCategories(data) {
   console.log("Mine data er", data);
@@ -23,7 +26,7 @@ function showCategories(data) {
   // Omdan mealTypeImages objektet til et array af mealTypes og begræns til 8
   const uniqueMealTypes = Object.keys(mealTypeImages).slice(0, 8);
 
-  // Generér HTML med dynamiske billeder
+  
   const markup = uniqueMealTypes
     .map(
       (mealType) => `
@@ -36,6 +39,7 @@ function showCategories(data) {
     `
     )
     .join("");
+
 
   categoryContainer.innerHTML = markup;
 }

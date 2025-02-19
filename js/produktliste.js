@@ -1,23 +1,63 @@
 // Hent kategori fra URL'en
 const myCategory = new URLSearchParams(window.location.search).get("category");
 
-// Opdater h1 med kategori-navnet, "alle opskrifter" hvis der ikke er valgt specifik
+// Opdater h1 med kategori-navnet, "Alle opskrifter" hvis der ikke er valgt specifik kategori
 document.querySelector("h1").textContent = myCategory || "Alle opskrifter";
-console.log("produktliste med kategorier:", myCategory);
+console.log("Produktliste med kategorier:", myCategory);
+
+// Hent container til opskrifter
 const product_list_container = document.querySelector(".product_list_container");
 
-// Hent data fra API'et baseret på kategori
-fetch(`https://dummyjson.com/recipes?limit=150`)
+// Hent filter dropdown
+const cuisineSelect = document.getElementById("cuisine");
+
+// Hent filter container (skjules hvis man filtrerer via kategori fra index)
+const filterContainer = document.querySelector(".filter");
+
+let allRecipes = []; // Gem alle opskrifter her
+
+// Hent data fra API'et
+fetch("https://dummyjson.com/recipes?limit=150")
   .then((response) => response.json())
   .then((data) => {
-    // Filtrér opskrifter baseret på kategori, hvis en kategori er valgt
-    let recipes = data.recipes;
+    allRecipes = data.recipes;
+
+    // Filtrér opskrifter baseret på kategori, hvis en kategori er valgt via URL'en
+    let filteredRecipes = allRecipes;
     if (myCategory) {
-      recipes = recipes.filter((recipe) => recipe.mealType.includes(myCategory));
+      filteredRecipes = allRecipes.filter((recipe) =>
+        recipe.mealType.some((type) => type.toLowerCase() === myCategory.toLowerCase())
+      );
+      filterContainer.style.display = "none"; // Skjul filteret, hvis man har valgt kategori
     }
-    showList(recipes);
+
+    // Find unikke køkkentyper (cuisine) og tilføj til filteret
+    const uniqueCuisines = ["All", ...new Set(allRecipes.map((recipe) => recipe.cuisine))];
+
+    cuisineSelect.innerHTML = uniqueCuisines
+      .map((cuisine) => `<option value="${cuisine}">${cuisine}</option>`)
+      .join("");
+
+    // Vis de filtrerede opskrifter
+    showList(filteredRecipes);
   })
   .catch((error) => console.error("Fejl ved hentning af opskrifter:", error));
+
+// Lyt efter ændringer i filteret
+cuisineSelect.addEventListener("change", filterRecipes);
+
+// Funktion til at filtrere opskrifter baseret på køkken (cuisine)
+function filterRecipes() {
+  const selectedCuisine = cuisineSelect.value;
+
+  let filteredRecipes = allRecipes;
+
+  if (selectedCuisine !== "All") {
+    filteredRecipes = filteredRecipes.filter((recipe) => recipe.cuisine === selectedCuisine);
+  }
+
+  showList(filteredRecipes);
+}
 
 // Funktion til at vise opskrifter
 function showList(recipes) {

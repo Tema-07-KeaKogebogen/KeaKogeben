@@ -6,7 +6,7 @@
 
 /*Ingredienser*/
 .container_singleview {
-  background-color: #58483a7e;
+  background-color: #58483a4f;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,6 +31,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: last baseline;
+}
+ .tilbage{
+color: var(--lightgreen);
+
 }
 
 @media (min-width: 800px) {
