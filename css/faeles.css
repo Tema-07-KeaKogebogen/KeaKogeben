@@ -97,8 +97,9 @@ font-family: "Farro"
   }
   
   .menu a:hover {
-    color: var(--secondary);
+    color: var(--accent);
   }
+
   .burger {
     width: 30px;
     height: 20px;
@@ -248,7 +249,7 @@ margin-top: 2rem;
     line-height: 30px;
   }
   ol li::marker{
-    font-weight: bold;
+   font-weight: 500;
     color: var(--accent);
     font-size: 20px;
   }
@@ -258,6 +259,7 @@ margin-top: 2rem;
     background-color: var(--brown);
     margin: 0 auto;
     width: 40%;
+    margin-bottom: 1rem;
   }
   @media (min-width: 800px) {
     p{

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/produktliste.css">
     <script src="js/produktliste.js" defer></script>
     <script src="/js/menu.js" defer></script>
+    <script src="/js/filter.js" defer></script>
+  
     <link rel="stylesheet" href="./css/faeles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,13 +57,26 @@
             <div class="line"></div>
         </div>
     </header>
-    <main>
-        <h1 class="kategori"></h1>
-
-        <div class="product_list_container">
-
-        </div>
-    </main>
+   
+        <main>
+            
+            <h1 class="kategori"></h1>
+            <hr class="line">
+          
+            <div class="filter">
+                <label for="cuisine"> Choose cuisine: </label>
+                <select id="cuisine">
+                    <option value="All">All</option>
+                </select>
+        
+                
+                
+            </div>
+        
+      
+            <div class="product_list_container"></div>
+        </main>
+        
     <footer>
         <div class="logo_footer">
             <a href="index.html">

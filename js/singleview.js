@@ -19,6 +19,7 @@ if (productId) {
                 let mainContainer = document.querySelector("main"); 
                 mainContainer.innerHTML = `
 
+       
                   <h1>${data.name}</h1>
                       <hr class="line">
 
@@ -31,16 +32,12 @@ if (productId) {
                       <img src="${data.image}" alt="${data.name}">
                     </div>
                       <div class="information_singleview">
-                     
-            
-                     <div> <img src="assets/img/bestik.svg" alt="bestik"><p>${data.servings} personer</p></div>
-
-                     <div><img src="assets/img/diff.svg" alt="diff"><p> ${data.difficulty}<p></div>
+                      
+                     <div><img src="assets/img/bestik.svg" alt="bestik"><p>  ${data.servings} personer</p></div>
+                     <div>   <img src="assets/img/diff.svg" alt="diff"><p> ${data.difficulty}<p></div>
       
             <div class="time_singleview"><p >Preptime: ${data.prepTimeMinutes} min.</p>
-
             <p>Cooktime: ${data.cookTimeMinutes} min.</p></div>
-            
          </div> 
 
 
