@@ -20,260 +20,258 @@ font-family: "Assistant"
 font-family: "Farro"
 */
 :root {
-    --primary: #FFF7DB;
-    --secondary: #E4B455;
-    --accent: #EA5045;
-    --brown:#58483A;
-    --green:#476E12;
-    --lightgreen: #90A74C;
+  --primary: #fff7db;
+  --secondary: #e4b455;
+  --accent: #ea5045;
+  --brown: #58483a;
+  --green: #476e12;
+  --lightgreen: #90a74c;
 
-  
-  
-    --space-xs: 16px; 
-    --space-sm: 20px;
-    --space-md: 38px;
+  --space-xs: 16px;
+  --space-sm: 20px;
+  --space-md: 38px;
 
+  --space-lg: 18px;
+  --space-xl: 22px;
+  --space-xxl: 46px;
+}
 
-    --space-lg: 18px;
-    --space-xl: 22px;
-    --space-xxl: 46px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  main {
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 40px;
-  }
-  body{
-    background-color: var(--primary);
-  }
-  header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--lightgreen);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    z-index: 20;
-  }
-  .logo img {
-    width: 60%;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+body {
+  background-color: var(--primary);
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--lightgreen);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+.logo img {
+  width: 60%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.8rem;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #f8f9f9;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Assistant";
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--accent);
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #f8f9f9;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
   .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1.8rem;
-  }
-  
-  .menu li {
-    margin: 0;
-  }
-  
-  .menu a {
-    display: block;
-    padding: 10px;
-    color: #f8f9f9;
-    text-decoration: none;
-    font-size: 22px;
-    font-family: "Assistant";
-    font-weight: 400;
-    transition: color 0.3s;
-  }
-  
-  .menu a:hover {
-    color: var(--accent);
-  }
-
-  .burger {
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-  }
-  
-  .burger .line {
-    width: 100%;
-    height: 3px;
-    background-color: #f8f9f9;
-    margin-bottom: 5px;
-    transition: 0.2s linear;
-  }
-  .burger {
     display: none;
   }
-  @media screen and (max-width: 800px) {
-    .menu {
-      display: none;
-    }
-    .burger {
-      display: block;
-    }
-    .burger.active .line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      transition: 0.2s linear;
-    }
-  
-    .burger.active .line:nth-child(2) {
-      opacity: 0;
-      transition: 0.15s linear;
-    }
-  
-    .burger.active .line:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-      transition: 0.2s linear;
-    }
-  
-    nav.active .menu {
-      display: block;
-      background-color: var(--lightgreen);
-      position: absolute;
-      top: 100%;
-      left: 180px;
-      width: 100%;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-  
-    nav.active .menu li {
-      margin: 10px 20px;
-    }
-  
-    nav.active .menu a {
-      font-size: 20px;
-    }
+  .burger {
+    display: block;
   }
-  
-  
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
 
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
 
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
 
-
-  /*footer*/
-  footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    align-items: center;
-    background-color: var(--brown);
-    color: #f9f9f8;
-  
+  nav.active .menu {
+    display: block;
+    background-color: var(--lightgreen);
+    position: absolute;
+    top: 100%;
+    left: 180px;
     width: 100%;
-    margin: 0;
-    font-size: 16px; 
-    gap: 80px;
-    padding: 1rem 3rem; 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+  }
 }
 
-.logo_footer, .icons, .mail{
+/*footer*/
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  background-color: var(--brown);
+  color: #f9f9f8;
+
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  gap: 80px;
+  padding: 1rem 3rem;
+}
+
+.logo_footer,
+.icons,
+.mail {
   margin: 0 auto;
 }
-.logo_footer img{
-    width: 60%;
+.logo_footer img {
+  width: 60%;
 }
 
-  @media (min-width: 800px) {
-
+@media (min-width: 800px) {
   footer {
     flex-grow: 1;
-  display: flex;
+    display: flex;
     align-items: center;
   }
-  footer p{
+  footer p {
     text-align: center;
   }
-  
-  
+
   .icons {
     display: grid;
     grid-template-rows: auto;
     color: #f8f9f9;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
   }
 }
-  
-  /*font*/
-  h1 {
-    font-family: "Exo";
-    font-size: var(--space-md);
-    color: var(--accent);
-    font-weight: 400;
-    text-align: center;
-margin-top: 2rem;
-    margin-bottom: 5px;
-  }
-  
-  
-  h2 {
-    font-family: "Farro";
-    color: var(--brown);
-    font-weight: 400;
-    font-size: var(--space-sm);
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
-  
-  a {
-    font-family: "Assistant";
-    
-  }
-  
-  li {
-    font-family: "Assistant";
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-family: "Assistant";
+
+/*font*/
+h1 {
+  font-family: "Exo";
+  font-size: var(--space-md);
+  color: var(--accent);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: "Farro";
+  color: var(--brown);
+  font-weight: 400;
+  font-size: var(--space-sm);
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+a {
+  font-family: "Assistant";
+}
+
+li {
+  font-family: "Assistant";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Assistant";
   font-size: var(--space-xs);
-    font-weight: 400;
-    line-height: 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+ol li::marker {
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 20px;
+}
+.line {
+  border: none;
+  height: 2px;
+  background-color: var(--brown);
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 1rem;
+}
+@media (min-width: 800px) {
+  p {
+    font-size: var(--space-lg);
   }
-  ol li::marker{
-   font-weight: 500;
-    color: var(--accent);
-    font-size: 20px;
+  h2 {
+    font-size: var(--space-xl);
   }
-  .line{
-    border: none;
-    height: 2px;
-    background-color: var(--brown);
-    margin: 0 auto;
-    width: 40%;
-    margin-bottom: 1rem;
+  h1 {
+    font-size: var(--space-xxl);
   }
-  @media (min-width: 800px) {
-    p{
-      font-size: var(--space-lg);
-    }
-    h2{
-      font-size: var(--space-xl);
-    }
-    h1{
-      font-size: var(--space-xxl);
-    }
-    li{
-      font-size: 18px;
-    }
+  li {
+    font-size: 18px;
   }
-  
-  
+}
+
+.aktiv {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+
+  transition: text-decoration-color 0.3s ease-in-out;
+}
+
+.aktiv:hover {
+  text-decoration-color: var(--brown);
+}
