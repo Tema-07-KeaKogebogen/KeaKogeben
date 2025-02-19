@@ -1,0 +1,91 @@
+form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Assistant";
+  font-size: var(--space-xs);
+  font-weight: 400;
+  line-height: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #58483a;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  background-color: #e4b455;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #90a74c;
+}
+
+.time-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Mobile-first: Dropdown under ingrediensfelt */
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Type-sektionen med checkboxes */
+#typeOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#typeOptions label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* På skærme over 800px: Dropdown til højre for ingrediensfelt */
+@media (min-width: 800px) {
+  .ingredient {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ingredient input {
+    flex: 2;
+  }
+
+  .ingredient select {
+    flex: 1;
+  }
+}

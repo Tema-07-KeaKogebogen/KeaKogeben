@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeaKogebogen</title>
+    <link rel="stylesheet" href="./css/faeles.css">
+    <link rel="stylesheet" href="./css/opskrift.css">
+    <script src="/js/menu.js" defer></script>
+    <script src="js/opskrift.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Exo:ital,wght@0,100..900;1,100..900&family=Farro:wght@300;400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="/assets/Logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="produktliste.html">Alle opskrifter</a></li>
+
+                <li><a href="opskrifter.html">Opskriftværkstedet</a></li>
+            </ul>
+        </nav>
+
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main>
+        <h1>Opskriftværkstedet</h1>
+        <p>Har du den bedste opskrift på morgenboller, den ondeste
+            hjemmelavede burger, eller din farmors opskrift på småkager? Del den med os, så poster vi den måske på
+            siden!</p>
+
+        <form id="recipeForm">
+            <h2>Indsend en Opskrift</h2>
+
+            <label for="recipeName">Opskriftens Navn:</label>
+            <input type="text" id="recipeName" name="recipeName" required>
+
+            <label for="servings">Antal Portioner:</label>
+
+            <input type="number" id="servings" name="servings" min="1" required>
+
+            <label for="difficulty">Sværhedsgrad:</label>
+
+            <select id="difficulty" name="difficulty" required>
+                <option value="">Vælg sværhedsgrad</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <h3>Ingredienser:</h3>
+            <div id="ingredients">
+                <!-- JavaScript tilføjer felter her -->
+            </div>
+
+            <h3>Type af Ret:</h3>
+            <div id="typeOptions">
+                <!-- JavaScript indsætter mealType checkboxes her -->
+                <p>Vælg minimum én type</p>
+            </div>
+
+            <h3>Tider:</h3>
+            <div class="time-input">
+                <label for="prepTime">Forberedelsestid (min):</label>
+                <input type="number" id="prepTime" name="prepTime" min="0" required>
+            </div>
+
+            <div class="time-input">
+                <label for="cookTime">Tilberedningstid (min):</label>
+                <input type="number" id="cookTime" name="cookTime" min="0" required>
+            </div>
+
+            <h3>Instruktioner:</h3>
+            <label for="instructions">Skriv fremgangsmåden her:</label>
+            <textarea id="instructions" name="instructions" rows="5" placeholder="Beskriv hvordan opskriften laves..."
+                required></textarea>
+
+            <button type="submit">Indsend Opskrift</button>
+        </form>
+
+
+    </main>
+</body>
