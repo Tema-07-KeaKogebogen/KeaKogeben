@@ -78,3 +78,13 @@
   font-weight: 600;
   font-family: "assistant";
 }
+/* Center single item */
+.product_list_container.single-item {
+  display: flex;
+  justify-content: center;
+}
+
+.product_list_container.single-item .card {
+  max-width: 400px;
+  width: 100%;
+}
