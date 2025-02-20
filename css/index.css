@@ -58,6 +58,26 @@ hr,
   margin-bottom: 10px;
 }
 
+.cirkel:hover {
+  animation-name: cirkel_kf;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+@keyframes cirkel_kf {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
 .hero {
   aspect-ratio: 16/9;
   height: 650px;
