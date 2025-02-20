@@ -32,10 +32,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: last baseline;
 }
- .tilbage{
-color: var(--lightgreen);
-
-}
 
 @media (min-width: 800px) {
   .singleview_img img {
