@@ -15,13 +15,15 @@ label {
 
 input,
 select,
-textarea,
-button {
+textarea {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #58483a;
-  border-radius: 5px;
+  border: 2px solid #58483a;
+  border-radius: 4px;
+  background-color: #fff7db;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
 }
 
 textarea {
@@ -47,12 +49,6 @@ button:hover {
   margin-top: 10px;
 }
 
-img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
 /* Mobile-first: Dropdown under ingrediensfelt */
 .ingredient {
   display: flex;
@@ -71,7 +67,47 @@ img {
 #typeOptions label {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+}
+/* Grundlæggende styling af checkboxes */
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #58483a;
+  border-radius: 4px;
+  background-color: #fff7db;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Styling når checkbox er markeret */
+input[type="checkbox"]:checked {
+  background-color: #476e12;
+  border-color: #90a74c;
+}
+
+/* Korrekt styling af checkmark */
+input[type="checkbox"]::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -1px; /* Justerer vertikalt */
+  left: 5px; /* Justerer horisontalt */
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Gør checkmark synlig, når den er markeret */
+input[type="checkbox"]:checked::after {
+  opacity: 1;
 }
 
 /* På skærme over 800px: Dropdown til højre for ingrediensfelt */
