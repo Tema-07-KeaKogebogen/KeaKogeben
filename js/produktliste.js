@@ -27,20 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
       // Filtrér opskrifter baseret på kategori, hvis en kategori er valgt via URL'en
       let filteredRecipes = allRecipes;
       if (myCategory) {
-        filteredRecipes = allRecipes.filter((recipe) =>
-          recipe.mealType.some((type) => type.toLowerCase() === myCategory.toLowerCase())
-        );
-        filterContainer.style.display = "none"; // Skjul filteret, hvis man har valgt kategori
+        filteredRecipes = allRecipes.filter((recipe) => recipe.mealType.some((type) => type.toLowerCase() === myCategory.toLowerCase()));
+        // filterContainer.style.display = "none"; // Skjul filteret, hvis man har valgt kategori
       }
 
       // Find unikke køkkentyper (cuisine) og tilføj til filteret
-      const uniqueCuisines = ["All", ...new Set(allRecipes.map((recipe) => recipe.cuisine))];
-
+      const uniqueCuisines = ["All", ...new Set(filteredRecipes.map((recipe) => recipe.cuisine))];
+      if (!uniqueCuisines.includes("All")) {
+        uniqueCuisines.unshift("All");
+      }
       // Ensure cuisineSelect is not null before modifying innerHTML
       if (cuisineSelect) {
-        cuisineSelect.innerHTML = uniqueCuisines
-          .map((cuisine) => `<option value="${cuisine}">${cuisine}</option>`)
-          .join("");
+        cuisineSelect.innerHTML = uniqueCuisines.map((cuisine) => `<option value="${cuisine}">${cuisine}</option>`).join("");
 
         // Lyt efter ændringer i filteret
         cuisineSelect.addEventListener("change", filterRecipes);
@@ -56,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedCuisine = cuisineSelect?.value || "All";
 
     let filteredRecipes = allRecipes;
-
+    if (myCategory) {
+      filteredRecipes = filteredRecipes.filter((recipe) => recipe.mealType.some((type) => type.toLowerCase() === myCategory.toLowerCase()));
+    }
     if (selectedCuisine !== "All") {
       filteredRecipes = filteredRecipes.filter((recipe) => recipe.cuisine === selectedCuisine);
     }
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
 
     product_list_container.innerHTML = markup;
-    
+
     // Adjust the grid layout when the list is updated
     adjustGridLayout();
   }

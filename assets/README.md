@@ -12,7 +12,7 @@ Beslut, hvordan I vil organisere jeres projekt – struktur for mapper og filer.
 - Hvor placerer I boilerplate?(fx CSS- og JavaScript-filer, der bruges på tværs af projektet) - er placeret i Assets mappen i form af base filer.
 - Hvor placerer I HTML, CSS- og JavaScript-filer til fx detaljevisning og listevisning?
 
-—- Vi har lavet mapper til alle de forskellige filtyper - og billeder/fonte har vi placeret i en undermappe inde i vores assets mappe.
+—- Vi har lavet mapper til alle de forskellige filtyper - og billeder/fonte har vi placeret i en undermappe inde i vores assets mappe, dog ligger vores html'er frit
 
 ## Navngivning:
 
